@@ -8,16 +8,8 @@ import java.util.*;
 
 public class Util {
 
+    private static List<Host> hostLibrary = Arrays.asList(new Host(1, "Kandy", new HashMap<String, Boolean>()), new Host(2, "Matara", new HashMap<String, Boolean>()));;
     public static List<Host> getHostLibrary() {
-        Map<Date, Boolean> baseCalender = new HashMap<Date, Boolean>();
-        try {
-            baseCalender.put(new SimpleDateFormat("yyyy-MM-dd").parse("2022-02-01"), true);
-            baseCalender.put(new SimpleDateFormat("yyyy-MM-dd").parse("2022-02-02"), true);
-            baseCalender.put(new SimpleDateFormat("yyyy-MM-dd").parse("2022-02-03"), true);
-            baseCalender.put(new SimpleDateFormat("yyyy-MM-dd").parse("2022-02-19"), true);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return Arrays.asList(new Host(1, "Kandy", baseCalender), new Host(2, "Matara", baseCalender));
+        return hostLibrary;
     }
 }

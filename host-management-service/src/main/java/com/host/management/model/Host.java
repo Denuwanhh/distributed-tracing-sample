@@ -6,9 +6,9 @@ import java.util.Map;
 public class Host {
     private int hostID;
     private String address;
-    private Map<Date, Boolean> availability;
+    private Map<String, Boolean> availability;
 
-    public Host(int hostID, String address, Map<Date, Boolean> availability) {
+    public Host(int hostID, String address, Map<String, Boolean> availability) {
         this.hostID = hostID;
         this.address = address;
         this.availability = availability;
@@ -30,11 +30,11 @@ public class Host {
         this.address = address;
     }
 
-    public Map<Date, Boolean> getAvailability() {
+    public Map<String, Boolean> getAvailability() {
         return availability;
     }
 
-    public void setAvailability(Map<Date, Boolean> availability) {
+    public void setAvailability(Map<String, Boolean> availability) {
         this.availability = availability;
     }
 
