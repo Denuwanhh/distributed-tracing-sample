@@ -5,8 +5,7 @@ import java.util.Date;
 public class Booking {
     private int bookingID;
     private String email;
-    private Date checkingDate;
-    private Date checkoutDate;
+    private Date bookingDate;
     private Host host;
 
     public int getBookingID() {
@@ -25,20 +24,12 @@ public class Booking {
         this.email = email;
     }
 
-    public Date getCheckingDate() {
-        return checkingDate;
+    public Date getBookingDate() {
+        return bookingDate;
     }
 
-    public void setCheckingDate(Date checkingDate) {
-        this.checkingDate = checkingDate;
-    }
-
-    public Date getCheckoutDate() {
-        return checkoutDate;
-    }
-
-    public void setCheckoutDate(Date checkoutDate) {
-        this.checkoutDate = checkoutDate;
+    public void setBookingDate(Date bookingDate) {
+        this.bookingDate = bookingDate;
     }
 
     public Host getHost() {
@@ -54,8 +45,7 @@ public class Booking {
         return "Booking{" +
                 "bookingID=" + bookingID +
                 ", email='" + email + '\'' +
-                ", checkingDate=" + checkingDate +
-                ", checkoutDate=" + checkoutDate +
+                ", bookingDate=" + bookingDate +
                 ", host=" + host +
                 '}';
     }
