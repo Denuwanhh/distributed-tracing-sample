@@ -1,4 +1,4 @@
-# # Distributed-Tracing-Sample
+# Distributed-Tracing-Sample
 
 In this implementation contain two services in the hypothetical scenario on the reservation domain. Booking-service work as a backend-for-frontend service and user request hits directly to the booking-service when booking request raises two inter-services communication happens from booking-service to host-management-service and verify the availability of host and make booking calls.
 
