@@ -3,6 +3,7 @@ package com.booking.service;
 import com.booking.model.Booking;
 import com.booking.model.Host;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -64,4 +65,19 @@ public class BookingService {
         return response.getBody();
     }
 
+    @Cacheable(value = "echoCacheWithParam", key = "{#level, #format}")
+    public String getServiceDetails(String level, String format,String requestedBy) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String lineBreak = format.equals("NL") ? "\n" : " ";
+        if(level.equals("ALL")){
+            return "Book Service v.1.0"+lineBreak+"Developed By Denuwan"+lineBreak+""+requestedBy;
+        }else {
+            return "Book Service v.1.0"+lineBreak+""+requestedBy;
+        }
+
+    }
 }
